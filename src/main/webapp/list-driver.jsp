@@ -13,7 +13,7 @@
             <%
                 int pageSize = 9; // Tamaño por página
                 int currentPage = 1; // Página actual
-                int startIndex = (currentPage - 1) * pageSize; // Índice de inicio para la página actual
+                int startIndex = (currentPage - 1) * pageSize; // Inicio página actual
 
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 Database.connect();
@@ -21,7 +21,7 @@
                 List<Driver> driverList = Database.jdbi.withExtension(DriverDAO.class, DriverDAO::getDriver);
                 int totalDrivers = driverList.size(); // Total de pilotos
 
-                int endIndex = Math.min(startIndex + pageSize, totalDrivers); // Índice de fin para la página actual
+                int endIndex = Math.min(startIndex + pageSize, totalDrivers); // Índice de fin página actual
 
                 for (int i = startIndex; i < endIndex; i++) {
                     Driver driver = driverList.get(i);
@@ -29,7 +29,7 @@
 
             <div class="col">
                 <div class="card shadow-sm">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Piloto</text></svg>
+                    <img src="../f1_data/<%= driver.getImage() %>" class="bd-placeholder-img card-img-top"/>
                     <div class="card-body">
                         <p class="card-text"> <b><%= driver.getName() %></b></p>
                         <p class="card-text"> <%= driver.getNationality() %></p>

@@ -11,9 +11,9 @@
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <%
-                int pageSize = 9; // Tamaño de página, 9 GPs por página
+                int pageSize = 9; / Tamaño por página
                 int currentPage = 1; // Página actual
-                int startIndex = (currentPage - 1) * pageSize; // Índice de inicio para la página actual
+                int startIndex = (currentPage - 1) * pageSize; // Inicio página actual
 
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 Database.connect();
@@ -21,7 +21,7 @@
                 List<GP> gpList = Database.jdbi.withExtension(GPDAO.class, GPDAO::getGP);
                 int totalGPs = gpList.size(); // Total de GPs
 
-                int endIndex = Math.min(startIndex + pageSize, totalGPs); // Índice de fin para la página actual
+                int endIndex = Math.min(startIndex + pageSize, totalGPs); // Índice de fin página actual
 
                 for (int i = startIndex; i < endIndex; i++) {
                     GP gp = gpList.get(i);
@@ -50,10 +50,10 @@
         <br>
         <nav>
             <ul class="pagination justify-content-center">
-                <%-- Calcular el número total de páginas --%>
+                <%-- Calcula número total de páginas --%>
                 <% int totalPages = (int) Math.ceil((double) totalGPs / pageSize); %>
 
-                <%-- Generar enlaces de paginación --%>
+                <%-- Enlaces de paginación --%>
                 <% for (int pageNumber = 1; pageNumber <= totalPages; pageNumber++) { %>
                     <li class="page-item <% if (currentPage == pageNumber) { %>active<% } %>">
                         <a class="page-link" href="?page=<%= pageNumber %>"><%= pageNumber %></a>

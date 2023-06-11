@@ -18,4 +18,6 @@ public class Driver {
     private String nationality;
     @NonNull
     private int number;
+    @NonNull
+    private String image;
 }

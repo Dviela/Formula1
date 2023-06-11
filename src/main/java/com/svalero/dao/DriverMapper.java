@@ -14,8 +14,7 @@ public class DriverMapper implements RowMapper<Driver> {
                 rs.getString("ID_ESCUDERIA"),
                 rs.getString("NOMBRE_PILOTO"),
                 rs.getString("NACIONALIDAD"),
-                rs.getInt("NUMERO")
-
-        );
+                rs.getInt("NUMERO"),
+                rs.getString("FOTO"));
     }
 }

@@ -7,7 +7,7 @@
           </ol>
         </nav>
     </div>
-    <form action="add-driver" method="post">
+    <form action="add-driver" method="post" enctype="multipart/form-data">
         <div class="container">
           <div class="row">
             <div class="col">
@@ -24,19 +24,19 @@
             </div>
           </div>
           <br>
-          <div class="mb-3">
+
+          <div class="col-md-6">
                <div>
                    <label for="exampleFormControlTextarea1" class="form-label">Nacionalidad: </label>
                    <input type="text" id="nationality" name="nationality" class="form-control" placeholder="Espanol" >
                </div>
                <br>
-               <!--
-               <div class="col">
-                   <label for="exampleFormControlTextarea1" class="form-label">Escuderia: </label>
-                   <input type="text" id="team" name="team" class="form-control" placeholder="E7" >
-               </div>
-               -->
-               <div class="mb-3">
+          <div class="col-md-6">
+            <label for="image" class="form-label">Imagen</label>
+            <input type="file" class="form-control" id="image" name="image">
+          </div>
+          <br>
+               <div class="col-md-6">
                 <p>Escuderia: </p>
                    <select class="form-select" id="team" name="team">
                      <option selected>Seleccione Escuderia</option>
@@ -52,11 +52,11 @@
                      <option value="E10">Williams</option>
                    </select>
                </div>
-          </div>
+           </div>
+
           <br>
           <input class="btn btn-danger" type="submit" value="Enviar">
-        </div>
-
+        </div> <!--container-->
     </form>
 
 <%@include file="includes/footer.jsp"%>

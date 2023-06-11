@@ -20,8 +20,8 @@ public interface DriverDAO {
     Driver getDriver(String id);
 
     //Insertar nuevo Piloto
-    @SqlUpdate("INSERT INTO PILOTOS (ID_PILOTO, ID_ESCUDERIA, NOMBRE_PILOTO, NACIONALIDAD, NUMERO ) VALUES (?, ?, ?, ?, ?)")
-    void addDriver(String id, String team, String name, String nationality, int number);
+    @SqlUpdate("INSERT INTO PILOTOS (ID_PILOTO, ID_ESCUDERIA, NOMBRE_PILOTO, NACIONALIDAD, NUMERO, FOTO ) VALUES (?, ?, ?, ?, ?, ?)")
+    void addDriver(String id, String team, String name, String nationality, int number, String image);
 
     //Borrar Piloto
     @SqlUpdate("DELETE FROM PILOTOS WHERE ID_PILOTO = ?")
