@@ -38,10 +38,14 @@ public class AddDriverServlet extends HttpServlet {
         try {
             //Subir la imagen a la carpeta
             Part imagePart = request.getPart("image");
-            //TODO Controlar que no tenga imagen
-            String fileName = UUID.randomUUID() + ".jpg"; //Nombre Random
-            InputStream fileStream = imagePart.getInputStream();
-            Files.copy(fileStream, Path.of(filePath + File.separator + fileName));
+            String fileName;
+            if(imagePart.getSize() == 0) {
+                fileName = "no_image.jpg";
+            } else {
+                fileName = UUID.randomUUID() + ".jpg"; //Nombre Random
+                InputStream fileStream = imagePart.getInputStream();
+                Files.copy(fileStream, Path.of(filePath + File.separator + fileName));
+            }
 
             Class.forName("com.mysql.cj.jdbc.Driver");
             Database.connect();

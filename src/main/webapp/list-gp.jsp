@@ -11,7 +11,7 @@
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <%
-                int pageSize = 9; / Tamaño por página
+                int pageSize = 9; // Tamaño por página
                 int currentPage = 1; // Página actual
                 int startIndex = (currentPage - 1) * pageSize; // Inicio página actual
 
