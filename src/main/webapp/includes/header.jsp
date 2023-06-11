@@ -108,6 +108,7 @@
           .bd-mode-toggle {
             z-index: 1500;
           }
+
         </style>
 
     <!-- Estilos de la propia página  -->
