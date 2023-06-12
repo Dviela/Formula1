@@ -6,6 +6,12 @@
 
 <%@include file="includes/header.jsp"%>
 
+<script>
+function confirmDelete() {
+    return confirm("¿Seguro que desea eliminar este piloto?");
+}
+</script>
+
 <div class="album py-5 bg-dark">
 <div class="container">
 
@@ -29,7 +35,7 @@
                   <div class="d-flex justify-content-between align-items-center">
                   <a href="add-driver.jsp?id=<%= driver.getId() %>&action=edit& %>"
                   class="btn btn-outline-info">Editar Piloto</a>
-                  <a href="remove-driver?id=<%= driver.getId() %>" class="btn btn-outline-danger">Eliminar</a>
+                  <a href="remove-driver?id=<%= driver.getId() %>" class="btn btn-outline-danger" onclick="return confirmDelete();">Eliminar</a>
                   </div>
                 </div>
               </div>

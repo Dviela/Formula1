@@ -1,22 +1,27 @@
 <%@include file="includes/header.jsp"%>
-<div class="container">
-<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Gran Premio</li>
-  </ol>
-</nav>
-</div>
-<form action="add-gp" method="post">
 
-    <div class="container">
-    <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Id del Gran Premio</label>
-        <textarea class="form-control" id="id"  name="id" rows="1"></textarea>
-      </div>
-      <div class="row">
-        <div class="col">
-        <p>Circuito: </p>
+<script>
+  function showAlert() {
+    alert("Gran Premio registrado correctamente");
+  }
+</script>
+
+<div class="container">
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Gran Premio</li>
+      </ol>
+    </nav>
+
+<form action="add-gp" method="post" onsubmit="showAlert()">
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Id del Gran Premio</label>
+            <textarea class="form-control" id="id"  name="id" rows="1"></textarea>
+          </div>
+          <div class="row">
+            <div class="col">
+                <p>Circuito: </p>
                       <select class="form-select" id="circuit" name="circuit">
                         <option selected>Seleccione Circuito: </option>
                         <option value="C1">Bahrein</option>
@@ -43,9 +48,9 @@
                         <option value="C22">Las Vegas</option>
                         <option value="C23">Abu Dhabi</option>
                       </select>
-            <!--<label for="exampleFormControlTextarea1" class="form-label">ID del Circuito: </label>
-            <input type="text" id="circuit" name="circuit" class="form-control" placeholder="C2" aria-label="C2">-->
-        </div>
+
+
+             </div>
           <div class="col">
 
               <p>Piloto Ganador: </p>
@@ -77,8 +82,8 @@
                <input type="text" id="winner" name="winner" class="form-control" placeholder="P3" aria-label="P3">-->
           </div>
 
-      </div>
-      <br>
+    </div>
+        <br>
       <div class="mb-3">
         <label for="fecha">Fecha de Carrera:</label>
               <input type="date" id="date" name="date" required>
@@ -86,8 +91,9 @@
 
 
           <br>
-          <input class="btn btn-danger" type="submit" value="Enviar">
+          <input class="btn btn-danger" type="submit" value="Enviar" onclick="showAlert()>
+          <br>
     </div>
-
+    </div>
 </form>
 <%@include file="includes/footer.jsp"%>

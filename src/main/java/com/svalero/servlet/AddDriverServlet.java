@@ -26,12 +26,10 @@ public class AddDriverServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-        String filePath = "C:/Programas/apache-tomcat-10.1.7/webapps/f1_data"; //Enlace a carpeta de imagenes
-
+        String imagePath = request.getServletContext().getInitParameter("image-path");
         String id = request.getParameter("id");
         String team = request.getParameter("team");
         String name = request.getParameter("name");
-        //String number = request.getParameter("number");
         String nationality = request.getParameter("nationality");
         int number = Integer.parseInt(request.getParameter("number"));
 
@@ -44,7 +42,7 @@ public class AddDriverServlet extends HttpServlet {
             } else {
                 fileName = UUID.randomUUID() + ".jpg"; //Nombre Random
                 InputStream fileStream = imagePart.getInputStream();
-                Files.copy(fileStream, Path.of(filePath + File.separator + fileName));
+                Files.copy(fileStream, Path.of(imagePath + File.separator + fileName));
             }
 
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -56,7 +54,7 @@ public class AddDriverServlet extends HttpServlet {
 
 
 
-            out.println("Piloto Registrado");
+            //out.println("Piloto Registrado");
             response.sendRedirect("add-driver.jsp");
         } catch (ClassNotFoundException cnef){
             cnef.printStackTrace();
