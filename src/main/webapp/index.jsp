@@ -10,13 +10,13 @@
             <img src="../f1_data/nuevo_piloto.png" class="bd-placeholder-img rounded-circle"/>
             <h2 class="fw-normal">Nuevo Piloto</h2>
             <p>Rellene el formulario para insertar un nuevo piloto a la Base de Datos.</p>
-            <p><a href="add-driver.jsp" class="btn btn-success">Registrar Piloto</a></p>
+            <p><a href="add-driver.jsp?action=register" class="btn btn-success">Registrar Piloto</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-3">
             <img src="../f1_data/nuevo_circuito.png" class="bd-placeholder-img rounded-circle"/>
             <h2 class="fw-normal">Nuevo GP</h2>
             <p>Rellene el formulario para registrar los datos del ultimo Gran Premio.</p>
-            <p><a href="add-gp.jsp" class="btn btn-success">Registrar Gran Premio</a></p>
+            <p><a href="add-gp.jsp?action=register" class="btn btn-success">Registrar Gran Premio</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-3">
             <img src="../f1_data/lista_pilotos.png" class="bd-placeholder-img rounded-circle"/>

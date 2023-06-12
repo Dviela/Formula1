@@ -28,7 +28,7 @@ public interface DriverDAO {
     void removeDriver(String id);
 
     //Modificar Pilotos
-    @SqlUpdate("UPDATE PILOTOS SET ID_ESCUDERIA = ?, NOMBRE_PILOTO = ?, NACIONALIDAD = ?, NUMERO = ? WHERE ID_PILOTO = ?")
-    void editDriver(String team, String name, String nationality, int number, String id);
+    @SqlUpdate("UPDATE PILOTOS SET ID_ESCUDERIA = ?, NOMBRE_PILOTO = ?, NACIONALIDAD = ?, NUMERO = ?, FOTO = ? WHERE ID_PILOTO = ?")
+    void editDriver(String team, String name, String nationality, int number, String image, String id);
 
 }
