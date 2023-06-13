@@ -48,7 +48,7 @@ public class EditDriverServlet extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Database.connect();
 
-            String driverId = id;
+            String driverId = id;//TODO Creo que sobra
             Database.jdbi.withExtension(DriverDAO.class, dao -> {
                 dao.editDriver(team, name, nationality, number, fileName, driverId);
                 return null;

@@ -29,11 +29,11 @@ function confirmDelete() {
                         <img src="../f1_data/circuit.jpg" class="bd-placeholder-img card-img-top"/>
                         <div class="card-body">
                           <p class="card-text"> <%= gp.getDate() %></p>
-                          <p class="card-text">Circuito: <%= gp.getIdCircuit() %></p>
-                          <p class="card-text">Ganador: <%= gp.getIdWinner() %> </p>
+                          <p class="card-text">Circuito: <%= gp.getCircuit() %></p>
+                          <p class="card-text">Ganador: <%= gp.getWinner() %> </p>
                           <p class="card-text">ID del Gran Premio: <%= gp.getId() %></p>
                           <div class="d-flex justify-content-between align-items-center">
-                          <a href="add-gp.jsp?id=<%= gp.getId() %>&action=edit& %>"
+                          <a href="edit-gp.jsp?id=<%=gp.getId() %>&circuit=<%= gp.getWinner() %>&action=edit&winner=<%= gp.getCircuit() %>&date=<%= gp.getDate() %>"
                           class="btn btn-sm btn-outline-info">Editar GP</a>
                           <a href="remove-gp?id=<%= gp.getId() %>" class="btn btn-outline-danger" onclick="return confirmDelete();">Eliminar</a>
                           </div>

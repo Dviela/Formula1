@@ -1,9 +1,17 @@
 <%@include file="includes/header.jsp"%>
-<script>
-  function showAlert() {
+
+    <script>
+    function showAlert() {
     alert("Los valores del piloto han sido modificados");
-  }
-</script>
+    }
+    </script>
+
+    <script>
+      function confirmModify() {
+          return confirm("¿Seguro que desea modificar los datos de este piloto?");
+    }
+    </script>
+
 
 <%
     String id = request.getParameter("id");
@@ -22,10 +30,12 @@
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Pilotos</li>
+        <li class="breadcrumb-item"><a href="list-driver.jsp">Pilotos</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Editar Piloto</li>
       </ol>
     </nav>
 </div>
+
 <form action="edit-driver" method="post" enctype="multipart/form-data" onsubmit="showAlert()">
     <div class="container">
       <div class="row">
@@ -57,8 +67,8 @@
       <br>
            <div class="col-md-6">
             <p>Escuderia: </p>
-               <select class="form-select" id="team" name="team" value='<%= team %>'>
-                 <option selected>Seleccione Escuderia</option>
+               <select class="form-select" id="team" name="team" >
+                 <option selected> <%= team %> </option>
                  <option value="E1">Mercedes</option>
                  <option value="E2">Red Bull Racing</option>
                  <option value="E3">Ferrari</option>
@@ -74,7 +84,9 @@
        </div>
 
       <br>
-      <input class="btn btn-danger" type="submit" value="Modificar">
+      <input class="btn btn-danger" type="submit" value="Modificar" onclick="return confirmModify()">
+      <a class="btn btn-secondary" href="list-driver.jsp" role="button">Volver</a>
+
     </div> <!--container-->
 </form>
 

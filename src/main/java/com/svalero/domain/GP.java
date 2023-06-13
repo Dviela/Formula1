@@ -12,9 +12,9 @@ import java.time.LocalDate;
 public class GP {
     private String id;
     @NonNull
-    private String idWinner;
+    private String winner;
     @NonNull
-    private String idCircuit;
+    private String circuit;
     @NonNull
     private LocalDate date;
 }
