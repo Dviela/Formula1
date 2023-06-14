@@ -76,6 +76,7 @@
                     </div>
                   <br>
                   <input class="btn btn-danger" type="submit" value="Buscar">
+                  <a href='javascript:history.back()' class='btn btn-primary'>Volver</a>
 
             </div> <!--container-->
 

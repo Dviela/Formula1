@@ -87,7 +87,8 @@
                         </div>
                         <br>
 
-                        <input class="btn btn-danger" type="submit" value="Enviar" onclick="showAlert()">
+                        <input class="btn btn-danger" type="submit" value="Enviar">
+                        <a href='javascript:history.back()' class='btn btn-primary'>Volver</a>
 
             </form>
     </div>

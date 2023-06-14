@@ -21,7 +21,7 @@ public class SearchDriver extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-        //TODO Modificar para 2 parámetros
+
         String nationality = request.getParameter("nationality");
         String team = request.getParameter("team");
 
@@ -31,13 +31,33 @@ public class SearchDriver extends HttpServlet {
 
             List<Driver> driverList = Database.jdbi.withExtension(DriverDAO.class, dao -> dao.searchDriver(nationality, team));
 
-            out.println("Pilotos encontrados: </div>");
-            out.println("<ul>");
+            // Escribir el código HTML de la página
+            out.println("<!DOCTYPE html>");
+            out.println("<html lang='en'>");
+            out.println("<head>");
+            out.println("<meta charset='UTF-8'>");
+            out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
+            out.println("<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>");
+            out.println("<style>");
+            out.println("body { font-family: Arial, sans-serif;\n background-color: rgba(133, 122, 126, .7);}");
+            out.println(".container { margin-top: 50px; }");
+            //out.println(".list-group-item { background-color: #ff0000; color: #ffffff; }");
+            out.println("</style>");
+            out.println("<title>Pilotos encontrados</title>");
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<div class='container'>");
+            out.println("<h2>Pilotos encontrados:</h2>");
+            out.println("<ol class=\"list-group list-group-numbered\">");
             for (Driver driver : driverList) {
-                out.println("<li>" + driver.toString() + "</li>");
+                out.println("<li class=\"list-group-item list-group-item-danger\">" + driver.toString() + "</li>");
             }
-            out.println("</ul>");
-
+            out.println("</ol>");
+            out.println("<br>");
+            out.println("<a href='javascript:history.back()' class='btn btn-danger'>Volver</a>");
+            out.println("</div>");
+            out.println("</body>");
+            out.println("</html>");
         } catch (ClassNotFoundException cnef) {
             cnef.printStackTrace();
         }

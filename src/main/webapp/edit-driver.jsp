@@ -1,12 +1,12 @@
 <%@include file="includes/header.jsp"%>
 <%@ page pageEncoding="UTF-8" %>
 
-    <script>
+  <!--  <script>
     function showAlert() {
     alert("Los valores del piloto han sido modificados");
     }
     </script>
-
+-->
     <script>
       function confirmModify() {
           return confirm("¿Seguro que desea modificar los datos de este piloto?");
@@ -37,12 +37,12 @@
     </nav>
 </div>
 
-<form action="edit-driver" method="post" enctype="multipart/form-data" onsubmit="showAlert()">
+<form action="edit-driver" method="post" enctype="multipart/form-data" onsubmit="return confirmModify()">
     <div class="container">
       <div class="row">
         <div class="col">
            <label for="exampleFormControlTextarea1" class="form-label">ID Piloto: </label>
-           <input type="text" id="id" name="id" class="form-control" value='<%= id %>'>
+           <input type="text" id="id" name="id" class="form-control" value='<%= id %>'readonly>
         </div>
         <div class="col">
             <label for="exampleFormControlTextarea1" class="form-label">Nombre: </label>
@@ -85,8 +85,8 @@
        </div>
 
       <br>
-      <input class="btn btn-danger" type="submit" value="Modificar" onclick="return confirmModify()">
-      <a class="btn btn-secondary" href="list-driver.jsp" role="button">Volver</a>
+      <input class="btn btn-danger" type="submit" value="Modificar" >
+      <a href='javascript:history.back()' class='btn btn-primary'>Volver</a>
 
     </div> <!--container-->
 </form>

@@ -8,7 +8,7 @@
     </script>
     <script>
       function confirmModify() {
-          return confirm("¿Seguro que desea modificar los datos de este piloto?");
+          return confirm("¿Seguro que desea modificar los datos de este Gran Premio?");
     }
     </script>
 
@@ -35,7 +35,7 @@
             <form action="edit-gp" method="post" onsubmit="showAlert()">
                     <div class="col-md-6">
                         <label for="exampleFormControlTextarea1" class="form-label">Id del Gran Premio</label>
-                        <input type="text" id="id" name="id" class="form-control" value='<%= id %>'>
+                        <input type="text" id="id" name="id" class="form-control" value='<%= id %>' readonly>
                     </div>
                     <div class="row">
                         <div class="col">
@@ -105,7 +105,7 @@
               <br>
 
               <input class="btn btn-danger" type="submit" value="Modificar" onclick="return confirmModify()">
-              <a class="btn btn-secondary" href="list-gp.jsp" role="button">Volver</a>
+              <a href='javascript:history.back()' class='btn btn-primary'>Volver</a>
               <br>
             </form>
     </div>

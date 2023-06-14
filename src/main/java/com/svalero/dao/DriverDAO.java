@@ -31,4 +31,7 @@ public interface DriverDAO {
     @SqlUpdate("UPDATE PILOTOS SET ID_ESCUDERIA = ?, NOMBRE_PILOTO = ?, NACIONALIDAD = ?, NUMERO = ?, FOTO = ? WHERE ID_PILOTO = ?")
     void editDriver(String team, String name, String nationality, int number, String image, String id);
 
+//    @SqlUpdate("UPDATE PILOTOS SET FOTO = ? WHERE ID_PILOTO = ?")
+//    void editImage(String image, String id);
+
 }
