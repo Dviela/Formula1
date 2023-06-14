@@ -1,4 +1,5 @@
 <%@include file="includes/header.jsp"%>
+<%@ page pageEncoding="UTF-8" %>
 
     <script>
     function showAlert() {

@@ -15,9 +15,9 @@ public interface DriverDAO {
     List<Driver> getDriver();
 
     //Busqueda Piloto por ID
-    @SqlQuery("SELECT * FROM PILOTOS WHERE ID_PILOTO = ?")
+    @SqlQuery("SELECT * FROM PILOTOS WHERE NACIONALIDAD = ?")
     @UseRowMapper(DriverMapper.class)
-    Driver getDriver(String id);
+    List<Driver> searchDriver(String nationality);
 
     //Insertar nuevo Piloto
     @SqlUpdate("INSERT INTO PILOTOS (ID_PILOTO, ID_ESCUDERIA, NOMBRE_PILOTO, NACIONALIDAD, NUMERO, FOTO ) VALUES (?, ?, ?, ?, ?, ?)")

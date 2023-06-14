@@ -20,4 +20,9 @@ public class Driver {
     private int number;
     @NonNull
     private String image;
+    @Override
+    public String toString() {
+        return "Nombre: " + getName() + ", Nacionalidad: " + getNationality() + ", Número: " + getNumber() + ", ID: " + getId();
+    }
 }
+

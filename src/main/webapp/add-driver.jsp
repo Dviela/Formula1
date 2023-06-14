@@ -1,4 +1,6 @@
 <%@include file="includes/header.jsp"%>
+<%@ page pageEncoding="UTF-8" %>
+
 <script>
   function showAlert() {
     alert("Piloto registrado correctamente");
@@ -25,7 +27,7 @@
             <input type="text" id="name" name="name" class="form-control" placeholder="Fernando Alonso" >
         </div>
         <div class="col">
-            <label for="exampleFormControlTextarea1" class="form-label">Numero Piloto: </label>
+            <label for="exampleFormControlTextarea1" class="form-label">Nº Piloto: </label>
             <input type="number" id="number" name="number" class="form-control" placeholder="14" >
         </div>
       </div>
@@ -43,9 +45,9 @@
       </div>
       <br>
            <div class="col-md-6">
-            <p>Escuderia: </p>
+            <p>Escudería: </p>
                <select class="form-select" id="team" name="team">
-                 <option selected>Seleccione Escuderia</option>
+                 <option selected>Seleccione Escudería</option>
                  <option value="E1">Mercedes</option>
                  <option value="E2">Red Bull Racing</option>
                  <option value="E3">Ferrari</option>
@@ -61,7 +63,7 @@
        </div>
 
       <br>
-      <input class="btn btn-danger" type="submit" value="Enviar" onclick="showAlert()">
+      <input class="btn btn-danger" type="submit" value="Enviar">
     </div> <!--container-->
 </form>
 

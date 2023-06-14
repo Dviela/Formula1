@@ -12,8 +12,8 @@ public class GPMapper implements RowMapper<GP> {
     @Override
     public GP map(ResultSet rs, StatementContext ctx) throws SQLException {
         return new GP(rs.getString("ID_GP"),
-                rs.getString("ID_CIRCUITO"),
                 rs.getString("ID_GANADOR"),
+                rs.getString("ID_CIRCUITO"),
                 DateUtils.getLocalDate(rs.getDate("FECHA"))
 
         );

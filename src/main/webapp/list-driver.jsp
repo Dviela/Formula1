@@ -5,6 +5,7 @@
 <%@ page import="java.time.format.DateTimeFormatter" %>
 
 <%@include file="includes/header.jsp"%>
+<%@ page pageEncoding="UTF-8" %>
 
 <script>
 function confirmDelete() {
