@@ -23,13 +23,13 @@ public class SearchDriver extends HttpServlet {
         PrintWriter out = response.getWriter();
         //TODO Modificar para 2 parámetros
         String nationality = request.getParameter("nationality");
-        //String team = request.getParameter("team");
+        String team = request.getParameter("team");
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Database.connect();
 
-            List<Driver> driverList = Database.jdbi.withExtension(DriverDAO.class, dao -> dao.searchDriver(nationality));
+            List<Driver> driverList = Database.jdbi.withExtension(DriverDAO.class, dao -> dao.searchDriver(nationality, team));
 
             out.println("Pilotos encontrados: </div>");
             out.println("<ul>");

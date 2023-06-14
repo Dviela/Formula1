@@ -52,11 +52,28 @@
                              </select>
                       </div>
                     -->
+                    <div class="col-md-3">
+                      <p>Escuderia: </p>
+                         <select class="form-select" id="team" name="team">
+                           <option selected>Seleccione Escuderia</option>
+                           <option value="E1">Mercedes</option>
+                           <option value="E2">Red Bull Racing</option>
+                           <option value="E3">Ferrari</option>
+                           <option value="E4">McLaren</option>
+                           <option value="E5">Alpine Racing</option>
+                           <option value="E6">AlphaTauri</option>
+                           <option value="E7">Aston Martin</option>
+                           <option value="E8">Alpha Romeo Racing</option>
+                           <option value="E9">Haas</option>
+                           <option value="E10">Williams</option>
+                         </select>
+                    </div>
                     <div class="col-md-6">
-                               <div>
-                                   <label for="exampleFormControlTextarea1" class="form-label">Nacionalidad: </label>
-                                   <input type="text" id="nationality" name="nationality" class="form-control" placeholder="Espanol" >
-                               </div>
+                       <div>
+                           <label for="exampleFormControlTextarea1" class="form-label">Nacionalidad: </label>
+                           <input type="text" id="nationality" name="nationality" class="form-control" placeholder="Espanol" >
+                       </div>
+                    </div>
                   <br>
                   <input class="btn btn-danger" type="submit" value="Buscar">
 
