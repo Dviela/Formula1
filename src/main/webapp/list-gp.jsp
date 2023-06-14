@@ -29,7 +29,7 @@ function confirmDelete() {
                       <div class="card shadow-sm">
                         <img src="../f1_data/circuit.jpg" class="bd-placeholder-img card-img-top"/>
                         <div class="card-body">
-                          <small class="text-muted">Fecha Carrera: <%= gp.getDate().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) %></small>
+                          <small class="text-muted">Fecha Carrera: <%= gp.getDate().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) %></small>
                           <p class="card-text">Circuito: <%= gp.getCircuit() %></p>
                           <p class="card-text">Ganador: <%= gp.getWinner() %> </p>
                           <small class="text-muted"><%= gp.getId() %></small>

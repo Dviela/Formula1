@@ -15,9 +15,9 @@ public interface GPDAO {
     List<GP> getGP();
 
     //Busqueda GPs por ID
-    @SqlQuery("SELECT * FROM GP WHERE ID_GP = ?")
+    @SqlQuery("SELECT * FROM GP WHERE ID_CIRCUITO = ? AND FECHA = ?")
     @UseRowMapper(GPMapper.class)
-    GP getGP(String id);
+    List<GP> searchGP(String circuit, Date date);
 
     //Insertar nuevo GP
     @SqlUpdate("INSERT INTO GP (ID_GP, FECHA, ID_CIRCUITO, ID_GANADOR ) VALUES (?, ?, ?, ?)")
