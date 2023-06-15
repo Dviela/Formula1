@@ -9,11 +9,13 @@
 
 <%
     String driverId = request.getParameter("id");
+    String teamId = request.getParameter("team");
 
     Class.forName("com.mysql.cj.jdbc.Driver");
     Database.connect();
 
     Driver driver = Database.jdbi.withExtension(DriverDAO.class, dao -> dao.getDrivers(driverId));
+    //Team team = Database.jdbi.withExtension(TeamDAO.class, dao -> dao.getTeamNameById(teamId));
     //String teamName = Database.jdbi.withExtension(TeamDAO.class, dao -> dao.getTeamNameById(driver.getTeamId()));
 
 %>
@@ -25,7 +27,8 @@
 
           <div class="card-body">
             <h5 class="card-title"><b><%= driver.getName() %></b></h5>
-            <p class="card-text"> ID Escudería: <%= driver.getTeamId() %></p>
+            <p class="card-text"> ID Escudería: <%= teamId %></p>
+
             <p class="card-text"> <%= driver.getNationality() %></p>
             <p class="card-text">Numero: <%= driver.getNumber() %> </p>
             <p class="card-text"><small class="text-muted">ID Piloto: <%= driver.getId() %></small></p>

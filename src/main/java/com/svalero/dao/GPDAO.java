@@ -1,5 +1,6 @@
 package com.svalero.dao;
 
+import com.svalero.domain.Driver;
 import com.svalero.domain.GP;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
 import org.jdbi.v3.sqlobject.statement.SqlUpdate;
@@ -13,6 +14,11 @@ public interface GPDAO {
     @SqlQuery("SELECT * FROM GP")
     @UseRowMapper(GPMapper.class)
     List<GP> getGP();
+
+    //Get Piloto
+    @SqlQuery("SELECT * FROM GP WHERE ID_GP = ?")
+    @UseRowMapper(GPMapper.class)
+    GP getGPs(String id);
 
     //Busqueda GPs por ID
     @SqlQuery("SELECT * FROM GP WHERE ID_CIRCUITO = ? AND FECHA = ?")

@@ -27,14 +27,14 @@ function confirmDelete() {
 
             <div class="col">
               <div class="card shadow-sm">
-                <img src="../f1_data/<%= driver.getImage() %>" class="bd-placeholder-img card-img-top"/>
+                <img src="../f1_data/<%= driver.getImage() %>" class="bd-placeholder-img card-img-top" style="max-width: 430px; max-height: 260px;"/>
                 <div class="card-body">
                   <p class="card-text"> <b><%= driver.getName() %></b></p>
                   <p class="card-text"> <%= driver.getNationality() %></p>
                   <div class="d-flex justify-content-between align-items-center">
                   <a href="edit-driver.jsp?id=<%= driver.getId() %>&action=edit&name=<%= driver.getName() %>&number=<%= driver.getNumber() %>&nationality=<%= driver.getNationality() %>&team=<%= driver.getTeamId() %>"
                   class="btn btn-sm btn-outline-dark">Editar Piloto</a>
-                  <a href="view-details.jsp?id=<%= driver.getId() %>" class="btn btn-sm btn-outline-primary">Ver detalles</a>
+                  <a href="view-details-dr.jsp?id=<%= driver.getId() %>&team=<%= driver.getTeamId() %>" class="btn btn-sm btn-outline-primary">Ver detalles</a>
                   <a href="remove-driver?id=<%= driver.getId() %>" class="btn btn-sm btn-outline-danger" onclick="return confirmDelete();">Eliminar</a>
                   </div>
                 </div>

@@ -27,7 +27,7 @@ function confirmDelete() {
 
                     <div class="col">
                       <div class="card shadow-sm">
-                        <img src="../f1_data/circuit.jpg" class="bd-placeholder-img card-img-top"/>
+                        <img src="../f1_data/circuit.jpg" class="bd-placeholder-img card-img-top"style="max-width: 430px; max-height: 260px;"/>
                         <div class="card-body">
                           <small class="text-muted">Fecha Carrera: <%= gp.getDate().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) %></small>
                           <p class="card-text">Circuito: <%= gp.getCircuit() %></p>
@@ -36,7 +36,8 @@ function confirmDelete() {
                           <div class="d-flex justify-content-between align-items-center">
                           <a href="edit-gp.jsp?id=<%=gp.getId() %>&circuit=<%= gp.getCircuit() %>&action=edit&winner=<%= gp.getWinner() %>&date=<%= gp.getDate() %>"
                           class="btn btn-sm btn-outline-info">Editar GP</a>
-                          <a href="remove-gp?id=<%= gp.getId() %>" class="btn btn-outline-danger" onclick="return confirmDelete();">Eliminar</a>
+                          <a href="view-details-gp.jsp?id=<%= gp.getId() %>" class="btn btn-sm btn-outline-primary">Ver detalles</a>
+                          <a href="remove-gp?id=<%= gp.getId() %>" class="btn btn-sm btn-outline-danger" onclick="return confirmDelete();">Eliminar</a>
                           </div>
                         </div>
                       </div>

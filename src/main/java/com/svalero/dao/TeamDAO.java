@@ -22,7 +22,7 @@ public interface TeamDAO {
     //Nombre a traves de ID
     @SqlQuery("SELECT NOMBRE_ESCUDERIA FROM ESCUDERIAS WHERE ID_ESCUDERIA = ?")
     @UseRowMapper(TeamMapper.class)
-    String getTeamNameById(String id);
+    String getTeamNameById(String name);
 
 ////Busqueda Piloto por ID
 //@SqlQuery("SELECT * FROM PILOTOS WHERE NACIONALIDAD = ? AND ID_ESCUDERIA = ?")
