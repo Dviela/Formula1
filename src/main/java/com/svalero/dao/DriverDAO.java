@@ -13,6 +13,10 @@ public interface DriverDAO {
     @SqlQuery("SELECT * FROM PILOTOS")
     @UseRowMapper(DriverMapper.class)
     List<Driver> getDriver();
+    //Get Piloto
+    @SqlQuery("SELECT * FROM PILOTOS WHERE ID_PILOTO = ?")
+    @UseRowMapper(DriverMapper.class)
+    Driver getDrivers(String id);
 
     //Busqueda Piloto por ID
     @SqlQuery("SELECT * FROM PILOTOS WHERE NACIONALIDAD = ? AND ID_ESCUDERIA = ?")

@@ -22,7 +22,7 @@ public class Driver {
     private String image;
     @Override
     public String toString() {
-        return "Nombre: " + getName() + ", Nacionalidad: " + getNationality() + ", Número: " + getNumber() + ", ID: " + getId();
+        return "Nombre: " + getName() + ", Escudería: " + getTeamId() + ", Nacionalidad: " + getNationality() + ", Número: " + getNumber() + ", ID: " + getId();
     }
 }
 

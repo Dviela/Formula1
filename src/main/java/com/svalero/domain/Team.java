@@ -9,7 +9,7 @@ import lombok.*;
 @ToString
 
 public class Team {
-    private int id;
+    private String id;
     @NonNull
     private String name;
     @NonNull
