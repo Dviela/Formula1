@@ -13,6 +13,18 @@ function confirmDelete() {
 }
 </script>
 
+<section class="py-1 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h2 class="fw-light">Pilotos</h2>
+        <p class="lead text-muted">Toda la información de los Pilotos del mundial 2023</p>
+        <p>
+          <a href="search-driver.jsp" class="btn btn-primary my-2">Buscar Piloto</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
 <div class="album py-5 bg-dark">
 <div class="container">
 

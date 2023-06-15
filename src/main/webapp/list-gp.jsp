@@ -13,6 +13,19 @@ function confirmDelete() {
 }
 </script>
 
+<section class="py-1 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h2 class="fw-light">Grandes Premios</h2>
+        <p class="lead text-muted">Resultado y datos de las carreras ya disputadas en el mundial</p>
+        <p>
+          <a href="search-gp.jsp" class="btn btn-primary my-2">Buscar GP</a>
+          <!--<a href="search-gp2.jsp" class="btn btn-primary my-2">Buscar por ganador</a>-->
+        </p>
+      </div>
+    </div>
+  </section>
+
     <div class="album py-5 bg-dark">
         <div class="container">
 

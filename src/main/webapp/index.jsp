@@ -2,6 +2,18 @@
 <%@include file="includes/header.jsp"%>
 <%@ page pageEncoding="UTF-8" %>
 <br>
+<section class="py-1 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Formula1</h1>
+        <p class="lead text-muted">Programa de Gestión para mundial de F1 2023</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="featurette-divider">
+<br>
+
   <div class="container marketing">
 
       <div class="row">
@@ -9,7 +21,7 @@
             <img src="../f1_data/nuevo_piloto.png" class="bd-placeholder-img rounded-circle"/>
             <h2 class="fw-normal">Nuevo Piloto</h2>
             <p>Rellene el formulario para añadir un nuevo piloto a la Base de Datos.</p>
-            <p><a href="add-driver.jsp?action=register" class="btn btn-success">Registrar Piloto</a></p>
+            <p><a href="add-driver.jsp?action=register" class="btn btn-success">Añadir Piloto</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-3">
             <img src="../f1_data/nuevo_circuito.png" class="bd-placeholder-img rounded-circle"/>
@@ -34,13 +46,13 @@
       <div class="row">
               <div class="col-lg-6">
                   <img src="../f1_data/nuevo_piloto.png" class="bd-placeholder-img rounded-circle"/>
-                  <h2 class="fw-normal">Encontrar Piloto</h2>
+                  <h2 class="fw-normal">Busqueda de Pilotos</h2>
                   <p>Buqueda por nombre, nacionalidad o escudería.</p>
                   <p><a href="search-driver.jsp" class="btn btn-primary">Buscar Piloto</a></p>
               </div><!-- /.col-lg-4 -->
               <div class="col-lg-6">
                   <img src="../f1_data/nuevo_circuito.png" class="bd-placeholder-img rounded-circle"/>
-                  <h2 class="fw-normal">Encontrar GP</h2>
+                  <h2 class="fw-normal">Busqueda de GP</h2>
                   <p>Buqueda por nombre del circuito o fecha.</p>
                   <p><a href="search-gp.jsp" class="btn btn-primary">Buscar GP</a></p>
               </div><!-- /.col-lg-4 -->
