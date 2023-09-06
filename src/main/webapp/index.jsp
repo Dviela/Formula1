@@ -45,13 +45,13 @@
  <hr class="featurette-divider">
       <div class="row">
               <div class="col-lg-6">
-                  <img src="../f1_data/nuevo_piloto.png" class="bd-placeholder-img rounded-circle"/>
+                  <img src="../f1_data/buscar_piloto.png" class="bd-placeholder-img rounded-circle"/>
                   <h2 class="fw-normal">Busqueda de Pilotos</h2>
                   <p>Buqueda por nombre, nacionalidad o escudería.</p>
                   <p><a href="search-driver.jsp" class="btn btn-primary">Buscar Piloto</a></p>
               </div><!-- /.col-lg-4 -->
               <div class="col-lg-6">
-                  <img src="../f1_data/nuevo_circuito.png" class="bd-placeholder-img rounded-circle"/>
+                  <img src="../f1_data/buscar_circuito.png" class="bd-placeholder-img rounded-circle"/>
                   <h2 class="fw-normal">Busqueda de GP</h2>
                   <p>Buqueda por nombre del circuito o fecha.</p>
                   <p><a href="search-gp.jsp" class="btn btn-primary">Buscar GP</a></p>
