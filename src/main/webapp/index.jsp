@@ -57,6 +57,21 @@
                   <p><a href="search-gp.jsp" class="btn btn-primary">Buscar GP</a></p>
               </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
+            <div class="row">
+ <hr class="featurette-divider">
+              <div class="col-lg-6">
+                  <img src="../f1_data/nueva_escuderia.png" class="bd-placeholder-img rounded-circle"/>
+                  <h2 class="fw-normal">Nueva Escudería</h2>
+                  <p>Rellene el formulario para añadir una nueva escudería a la Base de Datos..</p>
+                  <p><a href="add-team.jsp" class="btn btn-success">Añadir Escudería</a></p>
+              </div><!-- /.col-lg-4 -->
+              <div class="col-lg-6">
+                  <img src="../f1_data/lista_escuderias.png" class="bd-placeholder-img rounded-circle"/>
+                  <h2 class="fw-normal">Escuderías</h2>
+                  <p>Consulte la lista de todos los equipos registrados. Edita o Elimina las Escuderías.</p>
+                  <p><a href="list-team.jsp" class="btn btn-danger">Ver Escuderías</a></p>
+              </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
   </div><!-- /.container marketing -->
 
 
