@@ -16,4 +16,9 @@ public class Team {
     private String country;
     @NonNull
     private String engine;
+
+    @Override
+    public String toString() {
+        return "Escudería: " + getName() + ", ID: " + getId();
+    }
 }

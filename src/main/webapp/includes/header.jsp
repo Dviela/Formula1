@@ -148,14 +148,15 @@
                     <svg class="bi d-block mx-auto mb-1" width="28" height="28"><use xlink:href="#speedometer2"/></svg>
                     Gran Premio
                   </a>
-                <!--
+
                 </li>
                 <li>
-                  <a href="#" class="nav-link text-white">
+                  <a href="list-team.jsp" class="nav-link text-white">
                     <svg class="bi d-block mx-auto mb-1" width="28" height="28"><use xlink:href="#table"/></svg>
                     Escuderias
                   </a>
                 </li>
+                <!--
                 <li>
                   <a href="#" class="nav-link text-white">
                     <svg class="bi d-block mx-auto mb-1" width="28" height="28"><use xlink:href="#grid"/></svg>

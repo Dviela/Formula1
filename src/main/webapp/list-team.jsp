@@ -38,7 +38,7 @@ function confirmDelete() {
 
                     <div class="col">
                       <div class="card shadow-sm">
-                        <img src="../f1_data/circuit.jpg" class="bd-placeholder-img card-img-top"style="max-width: 430px; max-height: 260px;"/>
+                        <img src="../f1_data/escuderia.jpg" class="bd-placeholder-img card-img-top"style="max-width: 430px; max-height: 260px;"/>
                         <div class="card-body">
                           <p class="card-text"> <b> Equipo: <%= team.getName() %> </b> </p>
                           <p class="card-text">Pais: <%= team.getCountry() %> </p>
