@@ -35,7 +35,7 @@
   <hr class="featurette-divider">
 <br>
 
-  <div class="container marketing">
+  <div class="py-1 text-center container">
 
       <div class="row">
         <div class="col-lg-4">
