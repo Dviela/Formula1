@@ -25,7 +25,6 @@ public class AddDriverServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
         String imagePath = request.getServletContext().getInitParameter("image-path");
         String id = request.getParameter("id");
         String team = request.getParameter("team");
@@ -52,9 +51,6 @@ public class AddDriverServlet extends HttpServlet {
                 return null;
             });
 
-
-
-            //out.println("Piloto Registrado");
             response.sendRedirect("add-driver.jsp");
         } catch (ClassNotFoundException cnef){
             cnef.printStackTrace();

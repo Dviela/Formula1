@@ -25,7 +25,6 @@ public class EditDriverServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         response.setContentType("text/html");
-        //PrintWriter out = response.getWriter();
         String imagePath = request.getServletContext().getInitParameter("image-path");
         String id = request.getParameter("id");
         String team = request.getParameter("team");
@@ -52,10 +51,7 @@ public class EditDriverServlet extends HttpServlet {
                 dao.editDriver(team, name, nationality, number, fileName, id);
                 return null;
             });
-        //TODO Crear un edit aparte para la foto y dejar este sin foto para que no la borre
 
-
-            //out.println("Piloto Registrado");
             response.sendRedirect("list-driver.jsp");
         } catch (ClassNotFoundException cnef){
             cnef.printStackTrace();

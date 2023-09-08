@@ -14,6 +14,14 @@ function confirmDelete() {
 </script>
 
 <section class="py-1 text-center container">
+
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Lista de Grandes Premios</li>
+  </ol>
+</nav>
+
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h2 class="fw-light">Grandes Premios</h2>

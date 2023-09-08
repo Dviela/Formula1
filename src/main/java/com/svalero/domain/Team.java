@@ -17,6 +17,7 @@ public class Team {
     @NonNull
     private String engine;
 
+    //Texto que se imprimirá en la busqueda
     @Override
     public String toString() {
         return "Escudería: " + getName() + ", ID: " + getId();

@@ -20,6 +20,8 @@ public class Driver {
     private int number;
     @NonNull
     private String image;
+
+    //Texto que se imprimirá en la busqueda
     @Override
     public String toString() {
         return "Nombre: " + getName() + ", Escudería: " + getTeamId() + ", Nacionalidad: " + getNationality() + ", Número: " + getNumber() + ", ID: " + getId();

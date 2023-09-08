@@ -9,14 +9,12 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.sql.Date;
 
 @WebServlet("/edit-team")
 public class EditTeamServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         response.setContentType("text/html");
-        //PrintWriter out = response.getWriter();
 
         String id = request.getParameter("id");
         String name = request.getParameter("name");
@@ -32,7 +30,7 @@ public class EditTeamServlet extends HttpServlet {
                 dao.editTeam(name, country, engine, id);
                 return null;
             });
-            //out.println("Gran Premio registrado con exito");
+
             response.sendRedirect("list-team.jsp");
         } catch (ClassNotFoundException cnef){
             cnef.printStackTrace();

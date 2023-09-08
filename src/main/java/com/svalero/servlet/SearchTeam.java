@@ -31,7 +31,7 @@ public class SearchTeam extends HttpServlet {
 
             List<Team> teamList = Database.jdbi.withExtension(TeamDAO.class, dao -> dao.searchTeam(engine));
 
-            // Escribir el código HTML de la página
+            // Código HTML para resultado de la busqueda
             out.println("<!DOCTYPE html>");
             out.println("<html lang='en'>");
             out.println("<head>");

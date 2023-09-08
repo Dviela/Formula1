@@ -31,7 +31,7 @@ public class SearchDriver extends HttpServlet {
 
             List<Driver> driverList = Database.jdbi.withExtension(DriverDAO.class, dao -> dao.searchDriver(nationality, team));
 
-            // Escribir el código HTML de la página
+            // Código HTML para resultado de la busqueda
             out.println("<!DOCTYPE html>");
             out.println("<html lang='en'>");
             out.println("<head>");
@@ -41,7 +41,6 @@ public class SearchDriver extends HttpServlet {
             out.println("<style>");
             out.println("body { font-family: Arial, sans-serif;\n background-color: rgba(133, 122, 126, .7);}");
             out.println(".container { margin-top: 50px; }");
-            //out.println(".list-group-item { background-color: #ff0000; color: #ffffff; }");
             out.println("</style>");
             out.println("<title>Pilotos encontrados</title>");
             out.println("</head>");

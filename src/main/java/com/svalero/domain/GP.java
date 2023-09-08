@@ -18,6 +18,8 @@ public class GP {
     private String circuit;
     @NonNull
     private LocalDate date;
+
+    //Texto que se imprimirá en la busqueda
     @Override
     public String toString() {
         return "Circuito: " + getCircuit() + ", Ganador: " + getWinner() + ", Fecha: "

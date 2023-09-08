@@ -9,7 +9,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Date;
 
 @WebServlet("/edit-gp")
@@ -17,7 +16,6 @@ public class EditGPServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         response.setContentType("text/html");
-        //PrintWriter out = response.getWriter();
 
         String id = request.getParameter("id");
         Date date = Date.valueOf(request.getParameter("date"));
@@ -33,7 +31,7 @@ public class EditGPServlet extends HttpServlet {
                 dao.editGP(date, circuit, winner, id);
                 return null;
             });
-            //out.println("Gran Premio registrado con exito");
+
             response.sendRedirect("list-gp.jsp");
         } catch (ClassNotFoundException cnef){
             cnef.printStackTrace();

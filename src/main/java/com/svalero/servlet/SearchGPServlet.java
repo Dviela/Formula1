@@ -32,7 +32,7 @@ public class SearchGPServlet extends HttpServlet {
 
             List<GP> gpList = Database.jdbi.withExtension(GPDAO.class, dao -> dao.searchGP(circuit, date));
 
-            // Escribir el código HTML de la página
+            // Código HTML para resultado de la busqueda
             out.println("<!DOCTYPE html>");
             out.println("<html lang='en'>");
             out.println("<head>");
@@ -42,7 +42,6 @@ public class SearchGPServlet extends HttpServlet {
             out.println("<style>");
             out.println("body { font-family: Arial, sans-serif;\n background-color: rgba(133, 122, 126, .7);}");
             out.println(".container { margin-top: 50px; }");
-            //out.println(".list-group-item { background-color: #ff0000; color: #ffffff; }");
             out.println("</style>");
             out.println("<title>Gran Premio encontrado</title>");
             out.println("</head>");

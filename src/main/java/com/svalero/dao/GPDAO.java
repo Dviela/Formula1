@@ -1,6 +1,5 @@
 package com.svalero.dao;
 
-import com.svalero.domain.Driver;
 import com.svalero.domain.GP;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
 import org.jdbi.v3.sqlobject.statement.SqlUpdate;
